@@ -15,13 +15,13 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
-// Add SQLite DbContext
+
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
-// Middleware setup
+
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -33,7 +33,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseSession(); // 👈 Add this BEFORE Authorization
+app.UseSession(); 
 app.UseAuthorization();
 
 app.MapControllerRoute(
