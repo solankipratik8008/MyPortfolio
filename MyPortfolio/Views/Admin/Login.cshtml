@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Admin Login";
+}
+
+<style>
+
+    .btn-login {
+        background-color: #D4A373;
+        color: #2C2C2C;
+        transition: all 0.3s ease-in-out;
+        font-weight: 600;
+        border-radius: 8px;
+    }
+
+        .btn-login:hover {
+            background-color: #b07855;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+</style>
+
+<div class="container mt-5" style="max-width: 500px;margin-top:140px !important" data-aos="zoom-in">
+    <div class="p-4 rounded mt-10" style="background-color: #4B2E2E; color: #F5EBDD; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
+        <h2 class="text-center mb-4" data-aos="fade-down">Admin Login</h2>
+
+        <form method="post" asp-action="Login" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" name="username" class="form-control" required style="background-color: #F5EBDD; color: #2C2C2C;" />
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" required style="background-color: #F5EBDD; color: #2C2C2C;" />
+            </div>
+            <button type="submit" class="btn w-100 btn-login" data-aos="zoom-in" data-aos-delay="200">Login</button>
+
+            @if (ViewBag.Error != null)
+            {
+                <div class="alert alert-danger mt-3 text-center" data-aos="fade-in">
+                    @ViewBag.Error
+                </div>
+            }
+        </form>
+    </div>
+</div>

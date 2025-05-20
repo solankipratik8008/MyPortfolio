@@ -1,0 +1,25 @@
+﻿@model MyPortfolio.Models.Comment
+@{
+    ViewData["Title"] = "Edit Comment";
+}
+
+<div class="container mt-5" data-aos="fade-up">
+    <h2 class="mb-4 text-center" data-aos="fade-down">Edit Comment</h2>
+
+    <form asp-action="EditComment" method="post" data-aos="zoom-in" data-aos-delay="200">
+        <input type="hidden" asp-for="Id" />
+
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Name</label>
+            <input asp-for="Name" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Message" class="form-label">Message</label>
+            <textarea asp-for="Message" class="form-control" rows="4" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-success">Save Changes</button>
+        <a asp-action="ManageComments" class="btn btn-secondary ms-2">Cancel</a>
+    </form>
+</div>

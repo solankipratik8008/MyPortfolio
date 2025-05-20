@@ -1,0 +1,47 @@
+﻿@model List<MyPortfolio.Models.Comment>
+@{
+    ViewData["Title"] = "Manage Comments";
+}
+
+<div class="container mt-100px" data-aos="fade-up">
+    <div class="p-4 rounded" style="background-color: #4B2E2E; color: #F5EBDD;">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 data-aos="fade-down">Manage Comments</h2>
+            <a asp-action="Logout" class="btn btn-danger" data-aos="fade-left"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+
+        @if (Model.Any())
+        {
+            <div class="table-responsive" data-aos="fade-up" data-aos-delay="100">
+                <table class="table table-bordered table-hover" style="background-color: #F5EBDD; color: #2C2C2C;">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Name</th>
+                            <th>Message</th>
+                            <th>Date Posted</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var comment in Model)
+                        {
+                            <tr data-aos="zoom-in-up" data-aos-delay="150">
+                                <td>@comment.Name</td>
+                                <td>@comment.Message</td>
+                                <td>@comment.DatePosted.ToString("f")</td>
+                                <td>
+                                    <a asp-action="EditComment" asp-route-id="@comment.Id" class="btn btn-sm btn-warning me-2">Edit</a>
+                                    <a asp-action="DeleteComment" asp-route-id="@comment.Id" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+        else
+        {
+            <p class="text-white" data-aos="fade-in">No comments available.</p>
+        }
+    </div>
+</div>
