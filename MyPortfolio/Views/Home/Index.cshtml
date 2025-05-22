@@ -32,11 +32,13 @@
     .profile-image-wrapper {
         position: relative;
         display: inline-block;
-        width: 220px;
-        height: 220px;
+        width: 290px;
+        height: 290px;
         border-radius: 50%;
         overflow: hidden;
         border: 4px solid #D4A373;
+        /* margin-top:0px; */
+        padding:5px;
     }
 
         .profile-image-wrapper img {
@@ -210,18 +212,20 @@
 
 
     <div class="about-section" data-aos="fade-up">
-        <div class="row align-items-center">
-            <div class="col-md-5 text-center mb-4 mb-md-0">
+        <div class="row align-items-center mt-10px">
+            <div class="col-md-5 text-center mb-3 mb-md-50px mt-0px">
                 <div class="profile-image-wrapper">
                     <img src="~/images/Mypic2.jpg" alt="Pratik Solanki" class="img-fluid rounded-circle">
                     <div class="overlay">
                         <span class="overlay-text">Pratik Kumar Solanki</span>
                     </div>
                 </div>
+            <h2>Who am I ?</h2>
+
             </div>
 
             <div class="col-md-7">
-                <h2>Who am I ?</h2>
+                @* <h2>Who am I ?</h2> *@
                 <p>
                     I'm <strong>Pratik Solanki</strong>, a passionate full-stack developer and Mobile Solutions Development student at Conestoga College.
                     My strongest programming languages are <strong>Python</strong>, <strong>C#</strong>, and <strong>Kotlin</strong>, which I actively use for backend and mobile development.
@@ -249,7 +253,7 @@
             </div>
         </div>
     </div>
-</div>
+
 
 <div class="chat-button-wrapper">
     <div class="chat-toggle-btn" onclick="toggleChat()"><i class="bi bi-chat-heart"></i></div>

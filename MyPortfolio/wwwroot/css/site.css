@@ -480,3 +480,31 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
             font-size: 0.9rem;
         }
 }
+
+
+/* === Responsive Adjustments === */
+@media (max-width: 768px) {
+    .project-card, .comment-item, .contact-form, .about-section {
+        width: 100% !important;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .form-control, .btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    h1, h2, h3, p {
+        font-size: 1.1rem;
+    }
+}
