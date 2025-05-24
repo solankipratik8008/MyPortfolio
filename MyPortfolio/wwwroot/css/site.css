@@ -549,3 +549,88 @@ footer {
     .projects-container.aos-animate {
         opacity: 1;
     }
+/* === NAVBAR CUSTOM === */
+.navbar {
+    background-color: var(--espresso) !important;
+    padding: 0.8rem 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+    .navbar .navbar-nav .nav-link {
+        color: var(--almond) !important;
+        font-weight: 500;
+        margin-right: 15px;
+        transition: color 0.3s ease;
+    }
+
+        .navbar .navbar-nav .nav-link:hover {
+            color: var(--light-almond) !important;
+        }
+
+.navbar-toggler {
+    border-color: var(--almond);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23F5EBDD' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28245, 235, 221, 0.7%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.btn-outline-light {
+    color: var(--almond);
+    border-color: var(--almond);
+    font-weight: 500;
+    margin-left: auto;
+    transition: all 0.3s ease;
+}
+
+    .btn-outline-light:hover {
+        background-color: var(--accent);
+        color: var(--espresso);
+        border-color: var(--accent);
+    }
+    
+/* === MOBILE NAV FIX === */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background-color: var(--espresso);
+        border-radius: 8px;
+        padding: 1rem;
+        margin-top: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar .navbar-nav .nav-link {
+        display: block;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .btn-outline-light {
+        margin: 10px 0 0 auto;
+        display: block;
+    }
+}
+
+.navbar .nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+    .navbar .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: var(--accent);
+        transition: width 0.3s ease-in-out;
+    }
+
+    .navbar .nav-link:hover {
+        color: var(--accent) !important;
+    }
+
+        .navbar .nav-link:hover::after {
+            width: 100%;
+        }
