@@ -471,3 +471,81 @@ footer {
         animation: bounce 0.4s ease;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
+
+/* === PROJECTS SECTION === */
+.projects-container {
+    background-color: var(--deep-espresso);
+    color: var(--almond);
+    padding: 60px 40px;
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 1100px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--almond);
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* === INDIVIDUAL PROJECT CARDS === */
+.project-card {
+    background-color: var(--espresso);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+    .project-card h2 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        color: var(--almond);
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .project-card p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: var(--light-almond);
+        margin-bottom: 20px;
+    }
+
+    .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+/* === DOWNLOAD BUTTON === */
+.btn-download {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--charcoal);
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+    .btn-download:hover {
+        background-color: #b07855;
+        color: #fff;
+        transform: translateY(-2px);
+    }
+.projects-container {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+    .projects-container.aos-animate {
+        opacity: 1;
+    }
